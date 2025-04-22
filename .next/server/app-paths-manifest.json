@@ -1,1 +1,12 @@
-{}
+{
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/clock/page": "app/clock/page.js",
+  "/food/page": "app/food/page.js",
+  "/login/page": "app/login/page.js",
+  "/lotto/page": "app/lotto/page.js",
+  "/movie/page": "app/movie/page.js",
+  "/page": "app/page.js",
+  "/subway/page": "app/subway/page.js",
+  "/todolist/page": "app/todolist/page.js"
+}

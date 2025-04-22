@@ -1,4 +1,4 @@
-'use client' // client에서 실행
+'use client' // client에서 실행, 이유는 localstorage는 서버에 없고 client에서만 알 수 있기 때문!!
 import { useAtom } from "jotai"
 import { logAtom } from "../atoms/IsLogin"
 import { useEffect } from "react";
