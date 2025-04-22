@@ -1,3 +1,4 @@
+import Image from "next/image";
 interface TailCardProps {
     title : string;
     subtitle : string;
@@ -10,7 +11,8 @@ export default function TailCard({title, subtitle, imgurl, kws}:TailCardProps) {
                     max-w-sm bg-white border border-gray-200 rounded-lg
                         shadow-sm dark:bg-gray-800 dark:border-gray-700">
             <div className="w-full h-48">
-                <img className="rounded-t-lg w-full h-full object-cover" src={imgurl} alt={title}/>
+                <Image className="rounded-t-lg w-full h-full object-cover" src={imgurl} alt={title} width={100} height={100}/>
+                {/* <img className="rounded-t-lg w-full h-full object-cover" src={imgurl} alt={title}/> */}
             </div>
             <div className="p-5 flex flex-col justify-between">
                 <h5 className="mb-2 text-xl font-bold tracking-tight truncate text-gray-700 dark:text-white">

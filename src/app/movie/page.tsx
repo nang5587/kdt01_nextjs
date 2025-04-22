@@ -35,18 +35,18 @@ export default function BoxOffice() {
   const [ndt, setnDt] = useState<string>('');
 
   const getYesterday = ():string => {
-    let dt = new Date();
+    const dt = new Date();
     dt.setDate(dt.getDate() - 1);
 
     //년도
-    let year = dt.getFullYear();
+    const year = dt.getFullYear();
 
     //월
-    let month = String(dt.getMonth() + 1).padStart(2, '0');
+    const month = String(dt.getMonth() + 1).padStart(2, '0');
     // month = month < 10 ? '0' + month : month ;
 
     //일 
-    let day = String(dt.getDate()).padStart(2, '0');
+    const day = String(dt.getDate()).padStart(2, '0');
 
     return (year + '-' + month + '-' + day);
   }
@@ -54,7 +54,7 @@ export default function BoxOffice() {
     //일일 박스 오피스 정보 가져오기
     const getFetchData = async() => {
       const mvApiKey = process.env.NEXT_PUBLIC_MV_KEY ;
-      let tmdt = ndt.replaceAll('-', '');
+      const tmdt = ndt.replaceAll('-', '');
       let url = 'https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?';
       url = `${url}key=${mvApiKey}&targetDt=${tmdt}`;
       console.log("url", url);
@@ -65,7 +65,7 @@ export default function BoxOffice() {
       const boxList = data.boxOfficeResult.dailyBoxOfficeList;
       console.log(boxList)
       
-      let tm = boxList.map((item:MovieT) =>  <tr key={item.movieCd} onClick={() => handleClick(item)}
+      const tm = boxList.map((item:MovieT) =>  <tr key={item.movieCd} onClick={() => handleClick(item)}
                                           className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200
                                                     hover:bg-gray-50 dark:hover:bg-gray-600 hover:cursor-pointer hover:font-bold">
                                       <td className=" px-6 p-4 text-center">
@@ -95,8 +95,8 @@ export default function BoxOffice() {
       setTags(tm);    
     }
     const handleClick = (item:MovieT) => {
-      let bt:React.ReactNode = <tr className="border-b bg-gray-100 dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <td className="px-6 p-4 text-center font-bold text-black" colSpan='7'>
+      const bt:React.ReactNode = <tr className="border-b bg-gray-100 dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td className="px-6 p-4 text-center font-bold text-black" colSpan={7}>
                   [{item.rankOldAndNew} {item.openDt}] <span className="text-blue-600">{item.movieNm}</span>,  &nbsp;상영한 스크린 수: {item.scrnCnt},  &nbsp;상영횟수: {item.showCnt}
                 </td>
               </tr>
@@ -126,8 +126,8 @@ export default function BoxOffice() {
 
   return (
     <div className="w-11/12">
-      <h2 className="text-3xl font-bold text-left ml-5 text-gray-700 flex flex-row justify-start items-center">
-        <span className="w-15"><Image src="/mvimg.png" width={70} height={70} alt="mvimg" /></span>&nbsp;&nbsp;Box Office
+      <h2 className="text-2xl font-bold text-left ml-5 text-gray-700 flex flex-row justify-start items-center">
+        <span className="w-15"><Image src="/mvimg.png" width={50} height={50} alt="mvimg" className="tilt-animation"/></span>&nbsp;Box Office
       </h2>
       <div className="flex justify-end items-center font-bold text-gray-700">
       <input type="date" ref={refDt} onChange={dateChng} className="my-5 mx-5 px-4 py-1 bg-white border border-gray-200 rounded-lg shadow-sm 

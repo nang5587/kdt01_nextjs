@@ -2,7 +2,7 @@
 // import "./font.css"
 import TailButton from "@/UI/TailButton";
 import { useAtom } from "jotai";
-import { useRef } from "react";
+import { useRef} from "react";
 import { logAtom } from "@/atoms/IsLogin";
 import { useRouter } from "next/navigation"
 import Image from "next/image";
@@ -10,6 +10,7 @@ import Image from "next/image";
 export default function Login() {
   //사용할 변수 초기화
   const [, setLogin] = useAtom(logAtom);
+  // const [email, setEmail] = useState<string | null>('');
   const router = useRouter();
   const emailref = useRef<HTMLInputElement>(null);
   const passref = useRef<HTMLInputElement>(null);
@@ -43,6 +44,14 @@ export default function Login() {
     //홈으로 이동
     router.push("/");
   };
+
+  // useEffect(()=>{
+  //   const localEmail : string | null = localStorage.getItem('logEmail');
+  //   if(localEmail){
+  //     setLogin(true);
+  //     setEmail(localEmail);
+  //   }
+  // },[setLogin, setEmail]);
 
   return (
       <div className="flex w-full justify-start px-6 py-5 lg:px-8 mt-20">

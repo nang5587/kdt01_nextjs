@@ -7,9 +7,9 @@ interface FoodCardProps {
 }
 
 interface imggubunT {
-  "광역지원센터" : String;
-  "기초푸드뱅크" : String;
-  "기초푸드마켓" : String;
+  "광역지원센터" : string;
+  "기초푸드뱅크" : string;
+  "기초푸드마켓" : string;
 }
 
 export default function FoodCard({obj}:FoodCardProps) {

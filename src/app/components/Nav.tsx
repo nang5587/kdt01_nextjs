@@ -69,6 +69,22 @@ export default function Nav() {
               mr-5 px-5 py-1 w-36 text-center hover:underline underline-offset-4">
             TODOLIST
           </Link>}
+
+          {/* 로그인 시 productlist 제공 */}
+          {login &&
+          <Link href="/productlist" id="navcenter"
+            className="inline-flex items-center justify-center text-xl text-gray-700
+              mr-5 px-5 py-1 w-36 text-center hover:underline underline-offset-4">
+            PRODUCT
+          </Link>}
+
+          {/* 로그인 시 productlist 제공 */}
+          {login &&
+          <Link href="/productlist2" id="navcenter"
+            className="inline-flex items-center justify-center text-xl text-gray-700
+              mr-5 px-5 py-1 w-36 text-center hover:underline underline-offset-4">
+            PRODUCT2
+          </Link>}
         </div>
 
         {/* 홈으로 이동 */}

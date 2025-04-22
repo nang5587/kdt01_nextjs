@@ -45,18 +45,18 @@ export default function Subway() {
       item => item["측정소"]
     );
     const getYesterday = () => {
-      let dt = new Date();
+      const dt = new Date();
       dt.setDate(dt.getDate() - 1);
   
       //년도
       let year = String(dt.getFullYear());
       year = year.slice(2);
       //월
-      let month = String(dt.getMonth() + 1).padStart(2, '0');
+      const month = String(dt.getMonth() + 1).padStart(2, '0');
       // month = month < 10 ? '0' + month : month ;
   
       //일 
-      let day = String(dt.getDate()).padStart(2, '0');
+      const day = String(dt.getDate()).padStart(2, '0');
       
       return (year +  month + day);
     }
@@ -71,7 +71,7 @@ export default function Subway() {
       const resp = await fetch(url);
       const data = await resp.json();
     
-      let subwayData = data.response.body.items.item;
+      const subwayData = data.response.body.items.item;
       setData(subwayData);
   }
 
@@ -131,7 +131,7 @@ export default function Subway() {
     const itemKeys:string[] = Object.keys(scode as Scode);
     const scodeT = scode as Scode;
 
-    let tm = itemKeys.map((item:string) => 
+    const tm = itemKeys.map((item:string) => 
           <th key={item} className="font-bold px-6 py-3 text-center w-1/9">
           {scodeT[item]["name"]}<br/>({item})
           </th>

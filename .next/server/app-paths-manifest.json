@@ -1,12 +1,16 @@
 {
-  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/clock/page": "app/clock/page.js",
   "/food/page": "app/food/page.js",
-  "/login/page": "app/login/page.js",
-  "/lotto/page": "app/lotto/page.js",
   "/movie/page": "app/movie/page.js",
   "/page": "app/page.js",
+  "/productdetail/page": "app/productdetail/page.js",
+  "/lotto/page": "app/lotto/page.js",
+  "/productlist2/page": "app/productlist2/page.js",
+  "/login/page": "app/login/page.js",
+  "/productdetail/[id]/page": "app/productdetail/[id]/page.js",
+  "/productlist/page": "app/productlist/page.js",
   "/subway/page": "app/subway/page.js",
   "/todolist/page": "app/todolist/page.js"
 }

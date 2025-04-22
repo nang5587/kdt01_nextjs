@@ -12,14 +12,13 @@ export default function  FoodMain(){
 
     const handleCategory = (c:string) => {
         console.log("handleCategory", c);
-        let tm = foodData.filter((item:FoodDataInter) => item["운영주체 분류"].replace(/ /g, '') == c);
+        const tm = foodData.filter((item:FoodDataInter) => item["운영주체 분류"].replace(/ /g, '') == c);
         setTags(tm.map((item:FoodDataInter) => <FoodCard 
                                 key={item['사업장명']}
                                 obj={item}/>));
     }
-    const bts = category.map(item =><div className='w-1/5 mx-10'>
-                                    <TailButton 
-                                    key={item}
+    const bts = category.map(item =><div key={item} className='w-1/5 mx-10'>
+                                    <TailButton
                                     caption={item.split('.')[1]}
                                     color={"lblue"}
                                     onClick={() => handleCategory(item)}/>
