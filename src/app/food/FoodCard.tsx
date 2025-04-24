@@ -25,7 +25,7 @@ export default function FoodCard({obj}:FoodCardProps) {
 
   return (
     <div className="w-full h-58  rounded-2xl text-gray-600 bg-white flex justify-start items-start text-left
-                    shadow-md">
+                    shadow-lg shadow-gray-200">
       <div className="w-1/4 flex justify-center pt-3 pl-3">
         <Image src={`/${imgs[obj["구분"] as keyof imggubunT]}.png`} width={200} height={200} alt= {obj["구분"]} />
       </div>
@@ -39,9 +39,11 @@ export default function FoodCard({obj}:FoodCardProps) {
         <div className="h-2/5">
             <p className='text-xs text-gray-500'>{obj["사업장 소재지"]}</p>
         </div>
-        <div className="h-1/5 " onClick={handleShow}>
-            <p className='h-11/12 text-xs bg-white shadow-lg shadow-gray-400 border-2 border-gray-200 rounded-md font-bold text-gray-500 flex items-center px-3 py-0.5
-                        cursor-pointer'>{isShow && `연락처(대표번호) : ${obj["연락처(대표번호)"]}, 팩스 : ${obj["팩스번호"]}`}</p>
+        <div className="w-full h-1/5 " onClick={handleShow}>
+            <p className='w-10/12 h-11/12 text-xs bg-sky-50 shadow-lg shadow-gray-400 border-2 border-gray-200 rounded-md font-bold text-gray-500 flex items-center px-3 py-0.5
+                        cursor-pointer'>
+              {isShow && `연락처(대표번호) : ${obj["연락처(대표번호)"]}, 팩스 : ${obj["팩스번호"]}`}
+            </p>
         </div>
       </div>
     </div>

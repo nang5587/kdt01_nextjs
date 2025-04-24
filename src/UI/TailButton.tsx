@@ -1,6 +1,6 @@
 interface TailButtonProps {
   caption:string;
-  color:"blue" | "red" | "emerald" | "orange" | "lorange" | "lblue" | "gray" | "white" | "yellow";
+  color:"blue" | "red" | "emerald" | "orange" | "lorange" | "lblue" | "gray" | "white" | "yellow" | "lyellow";
   onClick?:(e:MouseEvent<HTMLButtonElement>)=>void; // "?" 붙이면 onClick 반드시 안 써도 됨
 }
 
@@ -16,6 +16,7 @@ type BgT = {
   "gray":string;
   "white":string;
   "yellow":string;
+  "lyellow":string;
 }
 
 
@@ -28,8 +29,9 @@ export default function TailButton({caption, color, onClick}:TailButtonProps) {
         "lorange" : "bg-orange-300 text-white",
         "lblue" : "bg-blue-400 text-white",
         "gray" : "bg-gray-100 text-white",
-        "white" : "bg-white text-gray-600 font-bold",
+        "white" : "bg-white text-gray-600 font-bold border-2 border-gray-100",
         "yellow" : "bg-yellow-200 text-white",
+        "lyellow" : "bg-sky-900 text-white",
     }
     const bgHover:BgT = {
         "blue" : "hover:bg-blue-500 text-white",
@@ -41,13 +43,13 @@ export default function TailButton({caption, color, onClick}:TailButtonProps) {
         "yellow" : "hover:bg-yellow-400 text-white",
         "white" : "hover:bg-white text-gray-600 font-bold",
         "gray" : "hover:bg-gray-100 text-white",
+        "lyellow" : "hover:bg-sky-700 text-black",
     }
   return (
     <button type="button" onClick={onClick} className={`w-full py-2 px-4 text-base
                     flex justify-center items-center
                     ${bgHover[color]} hover:font-bold
-                    ${bg[color]} rounded-lg 
-                    `}>
+                    ${bg[color]} rounded-lg`}>
       {caption}
     </button>
   )

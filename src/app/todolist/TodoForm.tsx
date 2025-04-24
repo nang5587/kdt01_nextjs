@@ -79,7 +79,7 @@ export default function TodoForm({addTodo}:TodoFormProps) {
         <div id="kakaoNomal" className="mr-10 w-1/5">    
         <TailButton 
         caption="확인"
-        color="lblue"
+        color="lyellow"
         onClick={handleClick}
         />
         </div>
@@ -88,7 +88,7 @@ export default function TodoForm({addTodo}:TodoFormProps) {
         <div id="kakaoNomal" className="w-1/5">
         <TailButton 
         caption="취소"
-        color="lblue"
+        color="lyellow"
         onClick={handleRemove}
         />
         </div>

@@ -130,7 +130,7 @@ export default function BoxOffice() {
         <span className="w-15"><Image src="/mvimg.png" width={50} height={50} alt="mvimg" className="tilt-animation"/></span>&nbsp;Box Office
       </h2>
       <div className="flex justify-end items-center font-bold text-gray-700">
-      <input type="date" ref={refDt} onChange={dateChng} className="my-5 mx-5 px-4 py-1 bg-white border border-gray-200 rounded-lg shadow-sm 
+      <input type="date" ref={refDt} onChange={dateChng} className="mb-5 mx-5 px-4 py-1 bg-white border border-gray-200 rounded-lg shadow-sm 
                             focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-gray-400 cursor-pointer"/>
       </div>
       <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">

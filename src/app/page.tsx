@@ -2,7 +2,7 @@
 import { useAtom } from "jotai"
 import { logAtom } from "../atoms/IsLogin"
 import { useEffect } from "react";
-import Login from "./login/page";
+import Login from "./components/Login";
 import Image from "next/image";
 
 export default function Home() {

@@ -2,15 +2,15 @@
   "/_not-found/page": "/_not-found",
   "/favicon.ico/route": "/favicon.ico",
   "/clock/page": "/clock",
-  "/food/page": "/food",
-  "/movie/page": "/movie",
-  "/page": "/",
-  "/productdetail/page": "/productdetail",
-  "/lotto/page": "/lotto",
-  "/productlist2/page": "/productlist2",
   "/login/page": "/login",
+  "/lotto/page": "/lotto",
+  "/food/page": "/food",
   "/productdetail/[id]/page": "/productdetail/[id]",
+  "/productdetail/page": "/productdetail",
+  "/productlist2/page": "/productlist2",
   "/productlist/page": "/productlist",
   "/subway/page": "/subway",
-  "/todolist/page": "/todolist"
+  "/movie/page": "/movie",
+  "/todolist/page": "/todolist",
+  "/page": "/"
 }

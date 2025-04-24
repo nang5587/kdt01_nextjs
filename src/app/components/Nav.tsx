@@ -85,6 +85,14 @@ export default function Nav() {
               mr-5 px-5 py-1 w-36 text-center hover:underline underline-offset-4">
             PRODUCT2
           </Link>}
+
+          {/* 로그인 시 productlist 제공 */}
+          {login &&
+          <Link href="/productlist3" id="navcenter"
+            className="inline-flex items-center justify-center text-xl text-gray-700
+              mr-5 px-5 py-1 w-36 text-center hover:underline underline-offset-4">
+            PRODUCT3
+          </Link>}
         </div>
 
         {/* 홈으로 이동 */}
@@ -96,15 +104,15 @@ export default function Nav() {
 
           {/* 로그인 상태에 따라 로그인/로그아웃 아이콘 변경 */}
           {login ? (
-            <Link href="/login"
+            <div
               onClick={handlelogout}
               className="inline-flex items-center justify-center w-8 mr-5 text-gray-700">
               <RiLogoutCircleLine className="w-full h-full"/>
-            </Link>
+            </div>
           ) : (
-            <Link href="/login" className="inline-flex items-center justify-center w-8 mr-5 text-gray-700">
+            <div className="inline-flex items-center justify-center w-8 mr-5 text-gray-700">
             <RiLoginCircleLine className="w-full h-full"/>
-            </Link>
+            </div>
           )}
       </div>
     </div>

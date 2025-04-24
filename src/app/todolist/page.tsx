@@ -11,7 +11,7 @@ interface Tdata {
 }
 
 // 기본 URL 설정
-const baseurl:string = "http://localhost:3005/todos"
+const baseurl:string = "http://localhost:3000/api/todos"
 
 export default function TodoList() {
     const [tdata, setTdata] = useState<Tdata[]>([]);

@@ -20,16 +20,16 @@ export default function  FoodMain(){
     const bts = category.map(item =><div key={item} className='w-1/5 mx-10'>
                                     <TailButton
                                     caption={item.split('.')[1]}
-                                    color={"lblue"}
+                                    color={"lyellow"}
                                     onClick={() => handleCategory(item)}/>
                                     </div>)
 
     return (
     <div className="w-11/12 flex flex-col justify-center items-center">
-        <div className="w-full h-15 flex justify-center items-center mb-10">
+        <div className="w-9/12 h-15 flex justify-center items-center mb-10">
             {bts}
         </div>
-        <div className="w-11/12 grid grid-cols-1 lg:grid-cols-2 gap-7 place-items-center">
+        <div className="w-9/12 grid grid-cols-1 lg:grid-cols-2 gap-7 place-items-center">
             {tags}
         </div>
     </div>

@@ -20,7 +20,7 @@ export default function TodoItem({id, text, completed, handleDelete, handleToggl
             <p className="w-1/3">
                 <TailButton
                 caption="삭제"
-                color="lblue"
+                color="lyellow"
                 onClick={()=>handleDelete(id)}
                 />
             </p>
