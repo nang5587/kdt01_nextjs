@@ -4,6 +4,7 @@ import { FiUser } from "react-icons/fi";
 import { RiLoginCircleLine } from "react-icons/ri";
 import { RiLogoutCircleLine } from "react-icons/ri";
 import Link from "next/link";
+import { useRouter } from "next/navigation"
 import { useAtom } from "jotai";
 import { logAtom } from "../../atoms/IsLogin";
 
@@ -12,10 +13,12 @@ export default function Nav() {
   //전역변수로 로그인 상태 관리
   const [login, setLogin] = useAtom(logAtom);
 
+  const router = useRouter();
   //로그아웃 함수
   const handlelogout = () => {
     setLogin(false);
     localStorage.clear();
+    router.push('/');
   };
 
   return (

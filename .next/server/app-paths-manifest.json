@@ -1,15 +1,6 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/api/todos/route": "app/api/todos/route.js",
   "/api/user/route": "app/api/user/route.js",
-  "/clock/page": "app/clock/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/food/page": "app/food/page.js",
-  "/lotto/page": "app/lotto/page.js",
-  "/movie/page": "app/movie/page.js",
   "/page": "app/page.js",
-  "/productlist/page": "app/productlist/page.js",
-  "/productlist2/page": "app/productlist2/page.js",
-  "/productlist3/page": "app/productlist3/page.js",
   "/todolist/page": "app/todolist/page.js"
 }
